@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    environment {
+        APP_NAME = "my-app"
+    }
+
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/Nagendra27014/learning_devops'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'echo "Building $APP_NAME"'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'echo "Running tests"'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                sh 'echo "Packaging app"'
+            }
+        }
+    }
+}
