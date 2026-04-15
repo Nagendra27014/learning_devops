@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/Nagendra27014/learning_devops'
+                git branch: 'main', url: 'https://github.com/Nagendra27014/learning_devops.git'
             }
         }
 
