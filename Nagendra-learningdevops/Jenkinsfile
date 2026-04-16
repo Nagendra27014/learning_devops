@@ -5,10 +5,6 @@ pipeline {
         APP_NAME = "my-app"
     }
 
-    git add 
-git commit -m "test webhook"
-git push
-
     stages {
         stage('Clone') {
             steps {
