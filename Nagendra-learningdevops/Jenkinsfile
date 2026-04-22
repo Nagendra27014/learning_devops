@@ -27,7 +27,7 @@ pipeline {
             steps {
                 echo 'Deploiyingg application...'
 
-                sh 'echo "Deploymenttt successful"'
+                sh 'echo "Deploymentttt successful"'
             }
         }
     }
