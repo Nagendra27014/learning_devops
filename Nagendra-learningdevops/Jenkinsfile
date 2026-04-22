@@ -1,43 +1,32 @@
 pipeline {
     agent any
 
-    environment {
-        APP_NAME = "my-app"
-    }
-
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/Nagendra27014/learning_devops.git'
+                echo 'Cloning code...'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'echo "Building $APP_NAME"'
+                sh 'echo Building application...'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'echo "Running tests"'
+                sh 'echo Running tests...'
             }
         }
 
-        stage('Package') {
+        stage('Deploy') {
             steps {
-                sh 'echo "Packaging app"'
+                sh 'echo Deploying application...'
             }
-
+        }
+    }
 }
-
-echo "nagendra"
-
-}
-
-
-
-
 
 
 
