@@ -5,8 +5,11 @@ pipeline {
         stage('Clone') {
             steps {
                 echo 'Cloning code...'
+
                 git branch: 'main', url: 'git@github.com:Nagendra27014/learning_devops.git'
-            }
+           
+               credentialsId: 'github-ssh'
+ }
         }
 
         stage('Build') {
@@ -27,7 +30,7 @@ pipeline {
             steps {
                 echo 'Deploiyingg application...'
 
-                sh 'echo "Deploymenttttttt successfful"'
+                sh 'echo "Deploymentttttttt successfful"'
             }
         }
     }
