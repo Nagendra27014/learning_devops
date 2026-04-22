@@ -5,7 +5,7 @@ pipeline {
         stage('Clone') {
             steps {
                 git url: 'git@github.com:Nagendra27014/learning_devops.git',
-                    credentialsId: 'github-ssh'
+    credentialsId: '96cff77d-7c3a-47d1-a5bc-a2ee1c62fa6a'
             }
         }
 
