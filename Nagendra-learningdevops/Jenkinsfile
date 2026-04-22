@@ -1,45 +1,21 @@
-
-
-
 pipeline {
     agent any
 
     stages {
         stage('Clone') {
             steps {
-                echo 'Cloning code...'
-
-                git branch: 'main', url: 'git@github.com:Nagendra27014/learning_devops.git'
-           
-               credentialsId: 'github-ssh'
- }
+                git url: 'git@github.com:Nagendra27014/learning_devops.git',
+                    credentialsId: 'github-ssh'
+            }
         }
 
         stage('Build') {
             steps {
-                echo 'Building application...'
-                sh 'ls -la'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                sh 'echo "Tests passed"'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploiyingg application...'
-
-                sh 'echo "Deploymentttttttt successfful"'
+                echo 'Build stage running'
             }
         }
     }
 }
-
-
 
 
 
