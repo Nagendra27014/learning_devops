@@ -2,12 +2,8 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-                git url: 'git@github.com:Nagendra27014/learning_devops.git',
-    credentialsId: '96cff77d-7c3a-47d1-a5bc-a2ee1c62fa6a'
-            }
-        }
+        git url: 'git@github.com:Nagendra27014/learning_devops.git',
+    credentialsId: 'your-ssh-credential-id'
 
         stage('Build') {
             steps {
