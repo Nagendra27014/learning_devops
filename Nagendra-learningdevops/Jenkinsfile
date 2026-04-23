@@ -2,43 +2,18 @@ pipeline {
     agent any
 
     stages {
-        git url: 'https://github.com/Nagendra27014/learning_devops.git',
-    branch: 'main',
-    credentialsId: 'github-creds'
+        stage('Clone') {
+            steps {
+                git url: 'https://github.com/Nagendra27014/learning_devops.git',
+                    branch: 'main',
+                    credentialsId: 'github-creds'
+            }
+        }
 
         stage('Build') {
             steps {
-                echo 'Build stage running'
+                echo "Build started"
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
