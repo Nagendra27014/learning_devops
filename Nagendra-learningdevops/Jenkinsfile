@@ -2,8 +2,9 @@ pipeline {
     agent any
 
     stages {
-        git url: 'git@github.com:Nagendra27014/learning_devops.git',
-    credentialsId: 'your-ssh-credential-id'
+        git url: 'https://github.com/Nagendra27014/learning_devops.git',
+    branch: 'main',
+    credentialsId: 'github-creds'
 
         stage('Build') {
             steps {
