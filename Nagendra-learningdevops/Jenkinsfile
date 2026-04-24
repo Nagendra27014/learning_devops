@@ -6,7 +6,7 @@ pipeline {
             steps {
                 git url: 'https://github.com/Nagendra27014/learning_devops.git',
                     branch: 'main',
-                    credentialsId: 'github-creds'
+                    credentialsId: '1b9ce9a7-abba-4897-b473-0451775ab972'
             }
         }
 
